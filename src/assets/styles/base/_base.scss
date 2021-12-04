@@ -38,3 +38,9 @@ body{
     background-color: $bg-color;
     font-family: 'Open Sans', sans-serif;
 }
+
+.select-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
