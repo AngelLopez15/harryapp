@@ -1,0 +1,12 @@
+.header {
+  color: $text-color-ligth;
+  text-align: center;
+  &__text {
+    color: $text-color-ligth;
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+  &__logo {
+    width: 12.1rem; // aprox los 193.8px de la maqueta
+  }
+}
