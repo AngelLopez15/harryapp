@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root{
+  --primary-color:#6B63B5;
+  --secondary-color:rgba(107, 99, 181, 0.6);
+  --nutral-color: rgba(0, 0, 0, 0.6);
+  --bg-color:#000;
+  --bg-color-card: #fff;
+  --bg-character-dead: #ccc;
+  --bg-gryffindor: linear-gradient(135deg, #FF0000 0%, #FED482 100%);
+  --bg-hufflepuff:  linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+  --bg-ravenclaw: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+  --bg-slytherin: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+  --text-color-card-title:#081F32;
+  --text-color-card-body: #374A59;
+  --text-status-character: #999;
+  --text-color-ligth:#fff;
+}
+
+$primary-color: var(#6B63B5);
+$secondary-color:var(rgba(107, 99, 181, 0.6));
+$nutral-color: var(rgba(0, 0, 0, 0.6));
+$bg-color:var(#000);
+$bg-color-card: var(#fff);
+$bg-character-dead: var(#ccc);
+$bg-gryffindor: var(linear-gradient(135deg, #FF0000 0%, #FED482 100%));
+$bg-hufflepuff:  var(linear-gradient(135deg, #FFC700 0%, #FFF388 100%));
+$bg-ravenclaw: var(linear-gradient(135deg, #0597B7 0%, #66D1FF 100%));
+$bg-slytherin: var(linear-gradient(135deg, #1C792B 0%, #82E95E 100%));
+$text-color-card-title: var(#081F32);
+$text-color-card-body: var(#374A59);
+$text-status-character: var(#999);
+$text-color-ligth:var(#fff);
+
+body{
+    background-image: url('../../images/hogwarts.jpeg');
+    background-repeat: no-repeat;
+    background-color: $bg-color;
+    font-family: 'Open Sans', sans-serif;
+}
