@@ -7,6 +7,10 @@ import Header from './components/Header';
 import Modal from './components/Modal';
 import Navbar from './components/Navbar';
 
+// Redux
+import { Provider } from 'react-redux'
+import store from './store';
+
 function App() {
 
   const [characteres, setCharacteres] = useState([])
@@ -31,6 +35,7 @@ function App() {
 
   return (
     <>
+    <Provider store={store} >
       <Navbar />
       <Header />
       <div className="select-buttons">
@@ -65,6 +70,7 @@ function App() {
         }
       </section>
       <Modal />
+    </Provider>
     </>
   );
 }

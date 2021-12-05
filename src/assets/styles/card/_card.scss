@@ -47,10 +47,15 @@
 
   &__rigth {
     width: 17.1rem;
-    &_header {
+    &__header {
       margin: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
+      &__btn-fav{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
     }
     &__data-character{
       margin-top: 1rem;

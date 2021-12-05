@@ -11,21 +11,21 @@ export default function Modal() {
         <form className="form">
           <div className="form__input-1">
             <div className="input-name" >
-              <label className="text-input" for="name">NOMBRE</label>
+              <label className="text-input" htmlFor="name">NOMBRE</label>
               <input className="input-box" type="text" name="name" />
             </div>
             <div className="input-date">
-              <label className="text-input" for="date">CUMPLEAÑOS</label>
+              <label className="text-input" htmlFor="date">CUMPLEAÑOS</label>
               <input className="input-box" type="text" name="date" />
             </div>
           </div>
           <div className="form__input-2">
             <div className="input-eye">
-              <label className="text-input" for="eye">COLOR DE OJOS</label>
+              <label className="text-input" htmlFor="eye">COLOR DE OJOS</label>
               <input className="input-box" type="text" name="eye" />
             </div>
             <div className="input-hair">
-              <label className="text-input" for="hair">COLOR DE PELO</label>
+              <label className="text-input" htmlFor="hair">COLOR DE PELO</label>
               <input className="input-box" type="text" name="hair" />
             </div>
           </div>
@@ -34,12 +34,12 @@ export default function Modal() {
               <p>GÉNERO</p>
               <div className="gender-radio">
                 <div>
-                  <input type="radio" id="mujer" name="gender" value="mujer" checked />
-                  <label for="mujer">Mujer</label>
+                  <input type="radio" id="mujer" name="gender" value="mujer" defaultChecked />
+                  <label htmlFor="mujer">Mujer</label>
                 </div>
                 <div>
                   <input type="radio" id="hombre" name="gender" value="hombre" />
-                  <label for="hombre">Hombre</label>
+                  <label htmlFor="hombre">Hombre</label>
                 </div>
               </div>
             </div>
@@ -47,12 +47,12 @@ export default function Modal() {
               <p>POSICIÓN</p>
               <div className="gender-position">
                 <div>
-                  <input type="radio" id="estudiante" name="position" value="estudiante" checked />
-                  <label for="estudiante">Estudiante</label>
+                  <input type="radio" id="estudiante" name="position" value="estudiante" defaultChecked />
+                  <label htmlFor="estudiante">Estudiante</label>
                 </div>
                 <div>
                   <input type="radio" id="staff" name="position" value="staff" />
-                  <label for="staff">Staff</label>
+                  <label htmlFor="staff">Staff</label>
                 </div>
               </div>
             </div>
