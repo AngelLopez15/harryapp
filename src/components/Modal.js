@@ -2,7 +2,7 @@ import close from '../assets/images/close-circle-outline.svg'
 
 export default function Modal() {
   return (
-    <div className="modal-container">
+    <div className="modal-container display">
       <div className="modal">
         <div className="modal__header">
           <p className="modal__header__title">Agregar personaje</p>
