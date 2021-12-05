@@ -2,20 +2,20 @@
   background-color: $bg-color-card;
   display: flex;
   max-width: 32.1rem;
-  max-height: 16.5rem;
+  min-height: 16.5rem;
   border-radius: 1rem;
   margin: 1rem;
   overflow: hidden;
 
-  &__left-gryffindor,
-  &__left-hufflepuff,
-  &__left-ravenclaw,
-  &__left-slytherin {
+  &__left-Gryffindor,
+  &__left-Hufflepuff,
+  &__left-Ravenclaw,
+  &__left-Slytherin,
+  &__left-default {
     padding: 1rem;
     border-radius: 1rem 0 0 1rem;
     display: flex;
     width: 15rem;
-    height: 100%;
     justify-content: center;
     align-items: center;
     &__imagen{
@@ -25,43 +25,48 @@
     }
   }
 
-  &__left-gryffindor {
+  &__left-Gryffindor {
     background: $bg-gryffindor;
   }
 
-  &__left-hufflepuff {
+  &__left-Hufflepuff {
     background: $bg-hufflepuff;
   }
 
-  &__left-ravenclaw {
+  &__left-Ravenclaw {
     background: $bg-ravenclaw;
   }
 
-  &__left-slytherin {
+  &__left-Slytherin {
     background: $bg-slytherin;
+  }
+
+  &__left-default {
+    background-color: #c4c4c4;
   }
 
   &__rigth {
     width: 17.1rem;
     &_header {
-      margin-top: 1rem;
+      margin: 1rem 1.5rem;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
     }
     &__data-character{
       margin-top: 1rem;
-      margin-left: 2rem;
+      margin-left: 1.5rem;
       &__name {
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: $text-color-card-title;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
       &__date,
       &__gender,
       &__color-eye,
       &__color-hair {
         color: $text-color-card-title;
+        margin-bottom: 0.5rem;
       }
     }
   }
@@ -71,4 +76,8 @@
   font-size: 14px;
   font-weight: bold;
   color: $text-status-character;
+}
+
+.default {
+  background-color: #c4c4c4;
 }
