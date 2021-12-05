@@ -1,0 +1,98 @@
+.modal-container{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  top: 250px;
+}
+
+.modal {
+  width: 50rem;
+  background-color: $bg-color-card;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 1px 3px 28px 0px rgba(0,0,0,0.67);
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      color: $text-color-card-title;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.form {
+  &__input-1,
+  &__input-2,
+  &__input-3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+}
+
+.input-name,
+.input-date,
+.input-eye,
+.input-hair {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid #c4c4c4;
+}
+
+.gender-radio,
+.gender-position {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender-container,
+.position-container {
+  width: 40%;
+}
+
+.input-foto {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.foto-text {
+  margin-right: 1rem;
+}
+
+.btn-save-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-save {
+  min-width: 18rem;
+  height: 4.1875rem;
+  color: $text-color-ligth;
+  border-radius: 5px;
+  background-color: $text-status-character;
+  border-color: $primary-color;
+  border-width: 0.2rem;
+  cursor: pointer;
+}
+
+.text-input {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.input-box {
+  border: none;
+  background-color: #e4e4e4;
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+  width: 300px;
+  // width: 100%;
+}

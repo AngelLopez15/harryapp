@@ -4,13 +4,16 @@ import '../src/assets/styles/global.scss'
 import Button from './components/Button';
 import Card from './components/Card';
 import Header from './components/Header';
+import Modal from './components/Modal';
+import Navbar from './components/Navbar';
 
 function App() {
 
   const [characteres, setCharacteres] = useState([])
 
   useEffect(() => {
-    var config = {
+
+    let config = {
       method: 'get',
       url: 'http://localhost:5000/hp-characters',
       headers: { }
@@ -28,13 +31,18 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <Header />
       <div className="select-buttons">
         <Button 
-          text = { "ESTUDIANTES" } 
-        />
+          text = { "ESTUDIANTES" }
+          filter = { "hp-students" }
+          setCharacteres = { setCharacteres }
+          />
         <Button 
-          text = { "STAFF" } 
+          text = { "STAFF" }
+          filter = { "hp-staff" }
+          setCharacteres = { setCharacteres }
         />
       </div>
       <section className="home">
@@ -56,6 +64,7 @@ function App() {
           ))
         }
       </section>
+      <Modal />
     </>
   );
 }
