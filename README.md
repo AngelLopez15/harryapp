@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# App de Harry Potter hecha en React 17 usando Flexbox, SASS y Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Las instrucciones para levantar el proyecto son:
+* Descargar o clonar este repositorio 
+* Dentro del proyecto abrir una consola y ejecutar el comando yarn install para recontruir node_modules
+* Una vez instaladas las dependencias ejecutar el script `yarn fake-api` para levantar la API de json-server en el puerto 5000
+* Ejecutar el script `yarn start` para iniciar la app de React
 
-## Available Scripts
+### ¿Qué es lo que más te gustó de tu desarrollo?
 
-In the project directory, you can run:
+La parte que más disfruto del desarrollo web del lado del frontend es sin duda la maquetación, me gusta mucha la parte de
+replicar diseños y pasarlos de una mockup a una maqueta en HTML y CSS, ya que me es muy entretenido la parte de meter estilos y darle forma a los componentes UI. De igual manera este desarrollo me sirvio para poner a prueba mis conocimientos en React con el manejo de las props entre componentes padres, hijos y hermanos. Otra de las cosas que mas me gusto fue el poder usar Redux y haber podido lograr el manejo del estado global esta parte me gusto mucho por que casi no habia tenido la oportunidad de usar Redux en los proyectos donde he estado colaborando. Por ultimo otra parte que me gusta fue la forma en que acomode mi sistema de carpetas del proyecto ya que siento que la deje bastante ordenada.
 
-### `yarn start`
+### Si hubieras tenido más tiempo ¿qué hubieras mejorado o qué más hubieras hecho?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sin duda las pruebas unitarias es una parte importante que no me di tiempo de implementar y en las cuales tampoco soy muy diestro y es por eso que me hubiera llevado más tiempo el aprender a aplicarlas correctamente. Otra cosa que me hubiera gustado implementar es hacer la aplicación más robusta es decir meter más validaciones, por ejemplo que no se puedan repetir los personajes dos veces en la seccion de favoritos, tal vez eliminar de la interfaz el personaje marcado como favorito. Otra cosa que no me dio tiempo de aplicar fue poder convertir la foto que se sube en el formulario a base64 para poder subirla a algun servicio de almacenamiento y asi poder tener la imagen por medio de una URL. Otra cosa muy importante que me hubiera gustado implementar en la app son las microinteracciones con el usuario y que le dan retroalimentacion de lo que esta pasando con app con esto me refiero a mandar mensajes de "Exito", "Error", "Loaders" que si bien si deje los actions de Redux preparado para que estas microinteracciones se puedan implementar ya no me dio tiempo de hacerlo. Y por ultimo me hubiera gustado hacer los estilos moviles mejor si bien la deje lo mas parecido a como el mockup indicaba siento que pude hacerlo un poco mejor pero los estilos moviles llevan siempre un poco más de tiempo.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En la parte de cambiar la barra de favoritos y agregar personaje que en desktop esta arriba y en moviles esta abajo y fija fue un parte bastante retadora y que solucione haciendo dos barras y con ayuda de las media queries indicaba cuando mostrar una u otra barra. Me hubiera gustado hacerlo con una sola barra pero siento que barra si cambia bastante una de otra ademas de que ya se tiene demasiada logica de Redux dentro de ella.
+Otro punto de fue la parte de Redux que al principio no se podia lograr que se modificara el State y lo solucione volviendo a repasar todo el flujo de trabajo de Redux para al final descubrir que estaba llamando de forma erronea mi Action en el Reducer. De igual manera el mismo uso de Redux fue bastante retador ya que como mencione no he tenido muchas oportunidades de implementarlo o trbajar con él.
+Otro punto y que considero bastante importante es que en desarrollo los personajes se pueden agregar y eliminar de mis favoritos sin problema, sin embargo en produccion para poder eliminar de mis favoritos hace falta recargar la página para que la interfaz detecte que tiene personajes almacenados en favoritos y el boton de eliminar pueda hacer su funcion, quiero aclarar que los datos no se pierden al recargar la pagina, los datos permanecen. Estos es algo que "arregle" usando `window.location.reload(true)` sin embargo decido comertar esa linea de codigo ya que considero debe existir una solucion más optima pero que ya no me dio tiempo de buscar.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Deplor del Proyecto en Netlify
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Mi aplicación de esta prueba decidi hacerle deploy en el siguiente link [Netlify](https://nostalgic-hopper-244f47.netlify.app/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

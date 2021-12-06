@@ -1262,5 +1262,16 @@
       "id": "a044b2ea-fc9a-4b24-bca7-2222b504e3de"
     }
   ],
-  "favoritos": []
+  "favoritos": [
+    {
+      "name": "Hermione Granger",
+      "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
+      "id": 1
+    },
+    {
+      "name": "Harry Potter",
+      "image": "http://hp-api.herokuapp.com/images/harry.jpg",
+      "id": 2
+    }
+  ]
 }
