@@ -17,8 +17,9 @@ export default function Button(props) {
     };
     axios(config)
     .then(function (response) {
-      console.log(response.data)
+      // console.log(response.data)
       setCharacteres(response.data)
+      // window.location.reload(true)
     })
     .catch(function (error) {
       console.log(error);

@@ -4,14 +4,18 @@ import {
   ADD_ERROR,
   INIT_DOW_FAV,
   DOW_FAV_EXITO,
-  DOW_FAV_ERROR
+  DOW_FAV_ERROR,
+  GET_FAV_DELETE,
+  FAV_DELETE_EXITO,
+  FAV_DELETE_ERROR
 } from '../types'
 
 // Cada reducer tiene su propio state
 const initialState = {
   favoritos: [],
   error: null,
-  loading: false
+  loading: false,
+  deleteFav: null
 }
 
 export default function reducer(state = initialState, action) {
@@ -47,6 +51,23 @@ export default function reducer(state = initialState, action) {
         favoritos: action.payload
       }
     case DOW_FAV_ERROR:
+      return {
+        ...state,
+        loading: false,
+        error: action.payload
+      }
+    case GET_FAV_DELETE:
+      return {
+        ...state,
+        deleteFav: action.payload
+      }
+    case FAV_DELETE_EXITO:
+      return {
+        ...state,
+        favoritos: state.favoritos.filter( favorito => favorito.id !== state.deleteFav ),
+        deleteFav: null
+      }
+    case FAV_DELETE_ERROR:
       return {
         ...state,
         loading: false,

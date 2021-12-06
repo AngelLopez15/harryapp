@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 // redux
 import { useDispatch, useSelector } from 'react-redux'
-import { getFav } from '../actions/favActions'
+import { deleteFav, getFav } from '../actions/favActions'
 
 import bookmarkWhite from '../assets/images/bookmark-white.svg'
 import account from '../assets/images/account-plus.svg'
@@ -23,7 +23,19 @@ export default function Navbar() {
   // obtener el state (el state solo se puede acceder a el con el useSelector)
   const favoritos = useSelector( (state) => state.favoritos.favoritos )
 
-  console.log(favoritos)
+  // Para mandar mensajes a la UI en caso de error
+  const error = useSelector( (state) => state.favoritos.error )
+  const cargando = useSelector( (state) => state.favoritos.loading )
+
+  // Eliminar favorito
+  const borrar = (id) => {
+
+    // preguntar si desea eliminar
+
+    // pasarlo al action
+    dispatch(deleteFav(id))
+
+  }
 
   return (
     <>
@@ -38,7 +50,7 @@ export default function Navbar() {
                 <div className="item-fav" key={item.id} >
                   <img className="item-fav__picture" src={item.image} alt={item.name} />
                   <p className="item-fav__name">{item.name}</p>
-                  <img className="item-fav__delate" src={delate} alt="eliminar" />
+                  <img className="item-fav__delete" src={delate} alt="eliminar" onClick={()=> borrar(item.id)} />
                 </div>
                 ))
               )}

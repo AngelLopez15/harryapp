@@ -1195,46 +1195,5 @@
       "image": "http://hp-api.herokuapp.com/images/goyle.jpg"
     }
   ],
-  "favoritos": [
-    {
-      "name": "Harry Potter",
-      "image": "http://hp-api.herokuapp.com/images/harry.jpg",
-      "id": 1
-    },
-    {
-      "name": "Hermione Granger",
-      "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
-      "id": 2
-    },
-    {
-      "name": "Draco Malfoy",
-      "image": "http://hp-api.herokuapp.com/images/draco.jpg",
-      "id": 3
-    },
-    {
-      "name": "Severus Snape",
-      "image": "http://hp-api.herokuapp.com/images/snape.jpg",
-      "id": 4
-    },
-    {
-      "name": "Hermione Granger",
-      "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Mrs Norris",
-      "image": "http://hp-api.herokuapp.com/images/norris.JPG",
-      "id": 6
-    },
-    {
-      "name": "Neville Longbottom",
-      "image": "http://hp-api.herokuapp.com/images/neville.jpg",
-      "id": 7
-    },
-    {
-      "name": "Kingsley Shacklebolt",
-      "image": "http://hp-api.herokuapp.com/images/kingsley.jpg",
-      "id": 8
-    }
-  ]
+  "favoritos": []
 }

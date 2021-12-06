@@ -5,7 +5,10 @@ import {
   ADD_ERROR,
   INIT_DOW_FAV,
   DOW_FAV_EXITO,
-  DOW_FAV_ERROR
+  DOW_FAV_ERROR,
+  GET_FAV_DELETE,
+  FAV_DELETE_EXITO,
+  FAV_DELETE_ERROR
 } from '../types'
 
 // Agregando a favoritos
@@ -110,4 +113,53 @@ const dowCharacterFavSuccess = (favs) => ({
 const dowCharacterFavError = () => ({
   type: DOW_FAV_ERROR,
   payload: true,
+})
+
+// selecciona y elimina el producto
+export function deleteFav (id) {
+
+  return async ( dispatch ) => {
+
+    dispatch( getFavDelete(id) )
+    // console.log(id)
+
+    try {
+      
+      let config = {
+        method: 'delete',
+        url: `http://localhost:5000/favoritos/${id}`,
+        headers: { }
+      };
+      
+      await axios(config)
+      .then(function (response) {
+        console.log(response.data);
+        dispatch( getFavDeleteSucces() )
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
+    } catch (error) {
+      console.log(error)
+      dispatch(getFavDeleteError())
+    }
+
+  }
+
+} 
+
+const getFavDelete = (id) => ({
+  type: GET_FAV_DELETE,
+  payload: id,
+})
+
+const getFavDeleteSucces = () => ({
+  type: FAV_DELETE_EXITO,
+  // payload: ,
+})
+
+const getFavDeleteError = () => ({
+  type: FAV_DELETE_ERROR,
+  payload: true
 })
