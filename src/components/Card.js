@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import noFav from '../assets/images/bookmark-outline.svg'
+import Fav from '../assets/images/bookmark.svg'
 
 // Actions de redux
 import { addFav } from '../actions/favActions'
@@ -11,10 +12,15 @@ export default function Card(props) {
   const {name, alive, dateOfBirth, gender, eyeColour, hairColour, image, hogwartsStudent, hogwartsStaff, house} = props
 
   // state del componente
-  const [fav, setFav] = useState('')
+  const [fav, setFav] = useState({name: '', image: ''})
+  const [select, setSelect] = useState(false)
 
   // utilizando el useDistpach
   const dispatch = useDispatch()
+
+  // Acceder al state del store para mostrar mensajes en la Interfaz y decirle al Usuario el estatus de su peticion
+  const loading = useSelector( (state) => state.favoritos.loading)
+  const err = useSelector( (state) => state.favoritos.error)
 
   // manda llamar el action de favoritos
   const addFavorite = (characterFav) => dispatch( addFav(characterFav) )
@@ -25,8 +31,8 @@ export default function Card(props) {
     e.preventDefault()
     
     // agregando a favorito
-    addFavorite({fav})
-
+    addFavorite(fav)
+    setSelect(true)
   }
 
   return (
@@ -42,7 +48,17 @@ export default function Card(props) {
               {hogwartsStudent ? <span>ESTUDIANTE</span> : null } 
               {hogwartsStaff ?<span>STAFF</span> : null}
             </p>
-            <button type="submit" className="card__rigth__header__btn-fav" ><img className="card__rigth__imagen" src={noFav} alt="icono de bookmark" onClick={()=>setFav(name)} /></button>
+            {
+              select
+              ?
+                <button className="card__rigth__header__btn-fav" >
+                  <img className="card__rigth__imagen" src={Fav} alt="icono de bookmark" />
+                </button>
+              :
+                <button type="submit" className="card__rigth__header__btn-fav" >
+                  <img className="card__rigth__imagen" src={noFav} alt="icono de bookmark" onClick={()=>setFav({name: name, image: image})} />
+                </button>
+            }
           </div>
           <div className="card__rigth__data-character">
             <p className="card__rigth__data-character__name">{name}</p>

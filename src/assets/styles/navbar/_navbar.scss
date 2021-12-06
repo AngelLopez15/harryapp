@@ -13,6 +13,7 @@
       padding: 0.3rem 0.5rem;
       border: none;
       cursor: pointer;
+      box-shadow: 2px 5px 25px -1px rgba(0,0,0,0.68);
     }
     &__btn-l {
       border-radius: 0 0 0 10px;
@@ -22,4 +23,39 @@
       border-left: 1px solid #000;
     }
   }
+
+  &__dropdown{
+    background-color: $primary-color;
+    margin: -0.5rem 0rem;
+    z-index: -10;
+    border-radius: 0 0 10px 10px;
+    &__item-container{
+      padding-top: 1.5rem;
+      padding-right: 0.5rem ;
+      padding-left: 0.5rem;
+      padding-bottom: 0.2rem;
+    }
+  }
+
+}
+
+.item-fav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.3rem;
+  padding-top: 0.5rem;
+
+  &__picture {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    color: $text-color-ligth;
+    font-size: 14px;
+  }
+
 }
