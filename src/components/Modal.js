@@ -1,8 +1,11 @@
 import close from '../assets/images/close-circle-outline.svg'
 
-export default function Modal() {
+export default function Modal( props ) {
+
+  const { modal } = props
+
   return (
-    <div className="modal-container display">
+    <div className={modal ? "modal-container show" : "modal-container display"} >
       <div className="modal">
         <div className="modal__header">
           <p className="modal__header__title">Agregar personaje</p>

@@ -15,6 +15,8 @@ function App() {
 
   const [characteres, setCharacteres] = useState([])
 
+  const [modal, setModal] = useState(false)
+
   useEffect(() => {
 
     let config = {
@@ -36,7 +38,15 @@ function App() {
   return (
     <>
     <Provider store={store} >
-      <Navbar />
+      <Navbar 
+        modal= { modal }
+        setModal = { setModal }
+      />
+      <div className="modal-container-home">
+        <Modal 
+          modal= { modal }
+        />
+      </div>
       <Header />
       <div className="select-buttons">
         <Button 
@@ -69,7 +79,6 @@ function App() {
           ))
         }
       </section>
-      <Modal />
     </Provider>
     </>
   );

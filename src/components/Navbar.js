@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 // redux
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteFav, getFav } from '../actions/favActions'
@@ -8,7 +8,11 @@ import account from '../assets/images/account-plus.svg'
 import delate from '../assets/images/trash-can-outline.svg'
 
 
-export default function Navbar() {
+export default function Navbar(props) {
+
+  const { modal, setModal } = props
+
+  const [showFav, setShowFav] = useState(false)
 
   const dispatch = useDispatch()
 
@@ -41,9 +45,9 @@ export default function Navbar() {
     <>
       <nav className="navbar" >
         <div className="navbar__btns">
-          <button className="navbar__btns__btn-l">FAVORITOS <img src={bookmarkWhite} alt="bookmark" /> </button>
-          <button className="navbar__btns__btn-r">AGREGAR <img src={account} alt="account" /> </button>
-          <div className="navbar__dropdown">
+          <button className="navbar__btns__btn-l" onClick={()=> setShowFav(!showFav) } >FAVORITOS <img src={bookmarkWhite} alt="bookmark" /> </button>
+          <button className="navbar__btns__btn-r" onClick={()=> setModal(!modal) } >AGREGAR <img src={account} alt="account" /> </button>
+          <div className={ showFav ? "navbar__dropdown show" : "navbar__dropdown display"}>
             <div className="navbar__dropdown__item-container" >
               {favoritos.length===0 ? <p>No hay favoritos</p> : (
                 favoritos.map((item)=>(
