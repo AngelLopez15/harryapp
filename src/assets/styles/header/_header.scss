@@ -10,3 +10,9 @@
     width: 12.1rem; // aprox los 193.8px de la maqueta
   }
 }
+
+@media screen and (max-width: 639px) {
+  .header__text {
+    font-size: 1.5rem;
+  }
+}

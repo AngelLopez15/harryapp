@@ -6,6 +6,7 @@ import Card from './components/Card';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import Navbar from './components/Navbar';
+import NavbarMobile from './components/NavbarMobile';
 
 // Redux
 import { Provider } from 'react-redux'
@@ -80,6 +81,10 @@ function App() {
           ))
         }
       </section>
+      <NavbarMobile 
+        modal= { modal }
+        setModal = { setModal }
+      />
     </Provider>
     </>
   );

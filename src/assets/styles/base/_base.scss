@@ -61,6 +61,9 @@ p {
   margin-bottom: 2rem;
 }
 
-// .modal-container {
-//   position: relative;
-// }
+@media screen and (max-width: 639px) {
+  body {
+    background-image: none;
+    background-color: #000;
+  }
+}

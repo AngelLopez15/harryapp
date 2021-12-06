@@ -42,6 +42,7 @@ export default function Card(props) {
           <img className={`card__left-${house || 'default' }__imagen`} src={image} alt={name} />
         </div>
         <div className="card__rigth">
+          <p className="character__name-mobile">{name}</p>
           <div className="card__rigth__header">
             <p className="card__rigth__status"> 
               { alive ? <span>VIVO / </span> : <span>FINADO / </span> } 

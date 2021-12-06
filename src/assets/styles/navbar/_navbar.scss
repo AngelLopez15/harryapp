@@ -71,3 +71,57 @@
 .show {
   display: block;
 }
+
+.navbar-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 639px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 70px;
+  }
+
+  .navbar__btns-mobile {
+
+    &__btn-l-mobile,
+    &__btn-r-mobile {
+      background-color: $primary-color;
+      color: $text-color-ligth;
+      padding: 0.3rem 0.5rem;
+      border: none;
+      cursor: pointer;
+      box-shadow: 2px 5px 25px -1px rgba(0,0,0,0.68);
+    }
+    &__btn-l-mobile {
+      border-radius: 10px 0 0 0;
+    }
+    &__btn-r-mobile {
+      border-radius: 0 10px 0 0;
+      border-left: 1px solid #000;
+    }
+    
+  }
+
+  .navbar__dropdown-mobile {
+    background-color: $primary-color;
+    margin: -0.2rem 0rem;
+    z-index: -10;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .navbar__dropdown__item-container-mobile {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem ;
+    padding-left: 0.5rem;
+    padding-bottom: 0.8rem;
+  }
+
+}
