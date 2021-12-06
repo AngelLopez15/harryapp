@@ -45,6 +45,7 @@ function App() {
       <div className="modal-container-home">
         <Modal 
           modal= { modal }
+          setModal = { setModal }
         />
       </div>
       <Header />

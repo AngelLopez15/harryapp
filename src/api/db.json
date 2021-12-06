@@ -949,6 +949,35 @@
       "actor": "David Bradley",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
+    },
+    {
+      "id": "23edd76c-25ab-4e1a-95df-a722f0079ff0",
+      "name": "Angel",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "female",
+      "position": "hogwartsStaff"
+    },
+    {
+      "id": "9aff672d-b23e-4818-8740-1a3a12788e93",
+      "name": "Angel Lopez",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "male",
+      "image": "C:\\fakepath\\fakeavatar.jpg",
+      "position": "hogwartsStaff"
+    },
+    {
+      "id": "1680b7d2-5c1b-482f-af58-5cafdd441b2f",
+      "name": "Octavio",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "female",
+      "image": "C:\\fakepath\\fakeavatar.jpg",
+      "position": "hogwartsStaff"
     }
   ],
   "hp-students": [
@@ -1193,6 +1222,44 @@
       "actor": "Josh Herdman",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/goyle.jpg"
+    },
+    {
+      "id": "caef2099-9be0-46e9-89ba-b6d2b12c3343",
+      "name": "Angel",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "male",
+      "position": "hogwartsStudent"
+    },
+    {
+      "id": "a7ad519c-dc68-4556-8da7-461f04861ae2",
+      "name": "Octavio",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "male",
+      "image": "C:\\fakepath\\fakeavatar.jpg",
+      "position": "hogwartsStudent"
+    },
+    {
+      "id": "ccabf62f-93c4-44a5-935f-d80eab994cac",
+      "name": "hola",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "male",
+      "image": "",
+      "position": "hogwartsStudent"
+    },
+    {
+      "name": "hola munod",
+      "dateOfBirth": "04-01-1991",
+      "eyeColour": "negros",
+      "hairColour": "negros",
+      "gender": "male",
+      "position": "hogwartsStudent",
+      "id": "a044b2ea-fc9a-4b24-bca7-2222b504e3de"
     }
   ],
   "favoritos": []
